@@ -1,0 +1,38 @@
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+
+td {font-size:12px;}
+
+form{
+    border-top: 2px solid #e6e6e6;
+    padding: 3%;
+    margin-top: 3%;
+}
+.tdA {
+	padding:5px;
+	color:#0066CC;
+	}
+
+.tdB {
+	background-color:#ffffff;
+	padding:5px;
+	}
+
+.tdC {
+	color: #333;
+	letter-spacing:2px;
+    font-size: 22px;
+    display: inline-block;
+    margin-bottom: -50px;
+}
+
+.style1 {
+	color: #DB0000;
+	font-weight: bold;
+    font-size: 30px;
+    vertical-align: 20px;
+}
