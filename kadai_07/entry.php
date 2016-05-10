@@ -65,8 +65,8 @@
         <option value="ポリリズム">ポリリズム</option>
         <option value="チョコレートディスコ">チョコレートディスコ</option>
         <option value="マカロニ">マカロニ</option>
-        <option value="マカロニ">FAKE IT</option>
-        <option value="マカロニ">ねえ</option>
+        <option value="FAKE IT">FAKE IT</option>
+        <option value="ねえ">ねえ</option>
     </select>
     </label><br>
      <input type="button" value="送信" onclick="FormSubmit();">

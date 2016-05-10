@@ -10,6 +10,8 @@ $flag = $stmt->execute();
 
 //４データ表示
 $view="";//初期値が空（null）
+$label="";//初期値が空（null）グラフのラベル
+$number="";//初期値が空（null）グラフの票数
 if($flag==false){
   $view = "SQLエラー";
   
@@ -19,9 +21,12 @@ if($flag==false){
   while( $result = $stmt->fetch(PDO::FETCH_ASSOC)){
     //5.✴︎表示文字列を作成→変数に追記で代入(tableでもlistでもおけ)
       //($view = '<p>'$view .$result['name'].','.$result['email'].'</p>'; と同じ
-    $view .= '<tr><td>'.$juni.'</td><td>'.$result['favorite'].'</td><td>'.$result['cnt'].'</td></tr>';
+    $view .= '<tr><td>'.$juni.'</td><td>'.$result['favorite'].'</td><td>'.$result['cnt'].'0</td></tr>';
+      $label .= '"'.$result['favorite'].'"'. ',';
+      $number .= $result['cnt']. '0,';
       $juni = $juni +1; 
   }
+    $number .= '0';
 }
 ?>
 <!DOCTYPE html>
@@ -38,7 +43,7 @@ if($flag==false){
 <style>div{padding: 10px;font-size:16px;}</style>
 <script>
     function modoru(){
-        location.href = "top.php";
+        location.href = "index.html";
     }
 </script>
  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -65,7 +70,6 @@ if($flag==false){
   </nav>
 </header>
 <!-- Head[End] -->
-
 <!-- Main[Start] -->
 <div>
     <div class="container">
@@ -86,8 +90,7 @@ if($flag==false){
 <!-- Main[End] -->
 
 <!--棒グラフ処理start-->
- <script>
-        var MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+<script>
         var randomScalingFactor = function() {
             return (Math.random() > 0.5 ? 1.0 : -1.0) * Math.round(Math.random() * 100);
         };
@@ -98,17 +101,14 @@ if($flag==false){
             return 'rgba(' + randomColorFactor() + ',' + randomColorFactor() + ',' + randomColorFactor() + ',.7)';
         };
         var barChartData = {
-            labels: ["January", "February", "March", "April", "May", "June", "July"],
+            labels: [<?=$label?>],
             datasets: [{
-                label: 'Dataset 1',
+                label: '投票数',
                 backgroundColor: "rgba(220,220,220,0.5)",
-                data: [randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor()]
-            },
-                       {
-                label: 'Dataset 3',
-                backgroundColor: "rgba(151,187,205,0.5)",
-                data: [randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor()]
-            }]
+                data: [<?=$number?>]
+            }
+                
+            ]
         };
 //     #canvasに表示させる
         window.onload = function() {
@@ -121,66 +121,34 @@ if($flag==false){
                     // In this case, we are setting the border of each bar to be 2px wide and green
                     elements: {
                         rectangle: {
-                            borderWidth: 2,
+                            borderWidth: 10,
                             borderColor: 'rgb(0, 255, 0)',
                             borderSkipped: 'bottom'
                         }
                     },
                     responsive: true,
                     legend: {
-                        position: 'top',
+                        position: 'bottom',
+                        display: false,
                     },
                     title: {
                         display: true,
-                        text: 'Chart.js Bar Chart'
-                    }
+                        text: '集計結果'
+                    },
+                      //縦軸の目盛りの上書き許可。これ設定しないとscale関連の設定が有効にならないので注意。
+                    scaleOverride : true,
+
+                    //以下設定で、縦軸のレンジは、最小値0から5区切りで35(0+5*7)までになる。
+                    //縦軸の区切りの数
+                    scaleSteps : 1,
+                    //縦軸の目盛り区切りの間隔
+                   scaleStepWidth : 1,
+                   //縦軸の目盛りの最小値
+                   scaleStartValue : 1,
+
                 }
             });
         };
-        $('#randomizeData').click(function() {
-            var zero = Math.random() < 0.2 ? true : false;
-            $.each(barChartData.datasets, function(i, dataset) {
-                dataset.backgroundColor = randomColor();
-                dataset.data = dataset.data.map(function() {
-                    return zero ? 0.0 : randomScalingFactor();
-                });
-            });
-            window.myBar.update();
-        });
-        $('#addDataset').click(function() {
-            var newDataset = {
-                label: 'Dataset ' + barChartData.datasets.length,
-                backgroundColor: randomColor(),
-                data: []
-            };
-            for (var index = 0; index < barChartData.labels.length; ++index) {
-                newDataset.data.push(randomScalingFactor());
-            }
-            barChartData.datasets.push(newDataset);
-            window.myBar.update();
-        });
-        $('#addData').click(function() {
-            if (barChartData.datasets.length > 0) {
-                var month = MONTHS[barChartData.labels.length % MONTHS.length];
-                barChartData.labels.push(month);
-                for (var index = 0; index < barChartData.datasets.length; ++index) {
-                    //window.myBar.addData(randomScalingFactor(), index);
-                    barChartData.datasets[index].data.push(randomScalingFactor());
-                }
-                window.myBar.update();
-            }
-        });
-        $('#removeDataset').click(function() {
-            barChartData.datasets.splice(0, 1);
-            window.myBar.update();
-        });
-        $('#removeData').click(function() {
-            barChartData.labels.splice(-1, 1); // remove the label first
-            barChartData.datasets.forEach(function(dataset, datasetIndex) {
-                dataset.data.pop();
-            });
-            window.myBar.update();
-        });
     </script>
     <!--棒グラフ処理end-->
 </div><!--#count-->

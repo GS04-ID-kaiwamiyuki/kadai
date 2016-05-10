@@ -36,7 +36,7 @@ if($flag==false){
 <link href="css/style.css" type="text/css" rel="stylesheet" media="all">
 <script>
     function modoru(){
-        location.href = "top.php";
+        location.href = "index.html";
     }
 </script>
 </head>

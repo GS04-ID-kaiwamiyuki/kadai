@@ -30,7 +30,7 @@ $pdo=new PDO('mysql:dbname=an;charset=utf8; host=localhost', 'root', '');
   }
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="jp">
 <head>
 <meta charset="UTF-8">
 <title>登録完了</title>
@@ -39,6 +39,6 @@ $pdo=new PDO('mysql:dbname=an;charset=utf8; host=localhost', 'root', '');
 </head>
 <body id="insert">
 <h1><?=$name?>さん、ご登録ありがとうございます♡</h1>
-<a href="top.php">サイトTOPへ</a>
+<a href="index.html">サイトTOPへ</a>
 </body>
 </html>
