@@ -29,7 +29,7 @@ if($flag==false){
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>フリーアンケート表示</title>
+<title>登録データ一覧</title>
 <link rel="stylesheet" href="css/range.css">
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css" media="all">
@@ -41,14 +41,12 @@ if($flag==false){
 </script>
 </head>
 <body id="main">
-<div id="select">
+<div id="select" class="wrap">
 <!-- Head[Start] -->
 <header>
-  <nav class="navbar navbar-default">
+  <nav class="navbar">
     <div class="container-fluid">
-      <div class="navbar-header">
-      <a class="navbar-brand" href="index.php">登録リスト一覧</a>
-      <input type="button" name="" value="トップへ戻る" onclick="modoru()">
+<h2>member list</h2>
     </div>
   </nav>
 </header>
@@ -68,6 +66,7 @@ if($flag==false){
     </table>
     </div>
   </div>
+      <p class="b_btn"><input type="button" name="" value="TOP PAGE" onclick="modoru()"></p>
 </div>
 <!-- Main[End] -->
 </div>

@@ -6,6 +6,7 @@
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css" media="all">
 <link href="css/style.css" type="text/css" rel="stylesheet" media="all">
+
 <script type="text/javascript">
     //未入力チェック（未入力でアラート表示）
     function check(){
@@ -42,13 +43,14 @@
 </script>
 </head>
 <body>
-<div id="index">
+<div id="index" class="wrap">
 <!-- Head[Start] -->
 <header>
- 
+
     <div class="container-fluid">
-    <div class="navbar-header"><a class="navbar-brand" href="select.php">データ一覧</a></div>
-  </nav>
+    <div class="navbar-header">
+<h2>Entry Form</h2>
+
 </header>
 <!-- Head[End] -->
 

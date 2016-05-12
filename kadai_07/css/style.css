@@ -8,6 +8,7 @@ body{
 	color: #999;
     overflow-x: hidden;
     overflow-y: hidden;
+    font-size: 18px;
 }
 
 /*clearfix*/
@@ -24,6 +25,21 @@ body{
 .right{
 	float:right;
 }
+/*ボタン*/
+.btn{
+	border:1px #fafae9 solid;
+	padding:2.5% 33%;
+	margin: 3% auto;
+	font-size:14px;
+}
+.b_btn{
+    display: inline;
+    border: 1px #fafae9 solid;
+    padding: 0.6% 8%;
+    margin: 0 auto;
+    font-size: 14px;
+}
+
 /*横幅設定*/
 .inner{
     width: 960px;
@@ -50,6 +66,7 @@ a {
 
 a:hover {
 	color: #ECECEC;
+    text-decoration: none;
 }
 
 .none {
@@ -118,6 +135,36 @@ dt.overwhite:hover{
 	zoom:1.02;
 	}
 
+/*
+ボタンhover時色変化設定
+*/
+
+figure {
+	position: relative;
+	overflow: hidden;
+	width: 300px;
+}
+figcaption {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	width: 300px;
+	height: 60px;
+	background: rgba(0,0,0,.6);
+	-webkit-transform: rotateX(-180deg);
+	transform: rotateX(-180deg);
+	-webkit-transition: .5s;
+	transition: .5s;
+	opacity: 0;
+}
+figure:hover figcaption {
+	-webkit-transform: rotateX(0);
+	transform: rotateX(0);
+	opacity: 1;
+}
+/*ここまで*/
+
 /*--h2下線の設定--*/
 h2 {
     display: flex;
@@ -126,7 +173,7 @@ h2 {
 }
 h2:before,
 h2:after {
-    border-top: 1px solid #999;
+    border-top: 1px solid #fafae9;
     content: "";
     display: inline; /* for IE */
     flex-grow: 1;
@@ -144,11 +191,11 @@ h2:after {
 
 /*--見出し設定--*/
 h2,h3 ,h4,h5{
-	color: #fff;
+	color: #fafae9;
 }
 
 h2{
-	font-size:30px;
+	font-size:58px;
 	font-weight:800;
 	text-align:center;
 	margin:0  auto;
@@ -156,7 +203,7 @@ h2{
 
 h3 {
 	font-size:20px;
-	margin:0 auto 16px;
+	margin:0 auto 40px;
 	width:250px;
 	height:auto;
 	text-align:center;
@@ -180,7 +227,7 @@ h5 {
     min-height: 1100px;
 }
 #top header{
-        padding: 5%;
+        padding: 3%;
 }
 #top .main_img{
     background-image: url(../img/perfume.jpg);
@@ -191,7 +238,35 @@ h5 {
     display: block;
     position: relative;
 }
-
+.wrap{
+    padding: 3%;
+}
+.nonetop{
+    padding-top: 0 !important;
+}
+.subnav{
+    width: 78%;
+    margin: 1.2% auto;
+}
+.subnav ul{
+    width: 110%;
+    margin: 0  auto;
+}
+.subnav ul li{
+    width: 32%;
+    margin: 0 auto;
+    float: left;
+}
+.nonetop ul li{
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+}
+iframe{
+    padding: 1%;
+    border: 2px solid #ffff76;
+    margin: 3% auto;
+}
 
 
 

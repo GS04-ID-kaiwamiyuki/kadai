@@ -57,15 +57,14 @@ if($flag==false){
     </style>
 </head>
 <
-<body id="main">
+<body id="main" style="background-image:url(img/bg.jpg);">
     <div id="count">
 <!-- Head[Start] -->
 <header>
-  <nav class="navbar navbar-default">
+  <nav class="navbar">
     <div class="container-fluid">
       <div class="navbar-header">
-      <a class="navbar-brand" href="index.php">推し曲投票ランキング</a>
-      <input type="button" name="" value="トップへ戻る" onclick="modoru()">
+      <h2>投票RANKING</h2>
     </div>
   </nav>
 </header>
@@ -83,9 +82,10 @@ if($flag==false){
     </table>
     </div>
   </div>
-  <div id="container" style="width: 75%;">
+  <div id="container" style="width: 64%;">
         <canvas id="canvas"></canvas>
     </div>
+    <p><input type="button" name="" value="トップへ戻る" onclick="modoru()"></p>
 </div>
 <!-- Main[End] -->
 
