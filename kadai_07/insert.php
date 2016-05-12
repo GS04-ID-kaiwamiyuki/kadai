@@ -37,8 +37,9 @@ $pdo=new PDO('mysql:dbname=an;charset=utf8; host=localhost', 'root', '');
 <link href="css/bootstrap.min.css" rel="stylesheet"><link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css" media="all">
 <link href="css/style.css" type="text/css" rel="stylesheet" media="all">
 </head>
-<body id="insert">
-<h1><?=$name?>さん、ご登録ありがとうございます♡</h1>
-<a href="index.html">サイトTOPへ</a>
+<body id="insert" class="wrap">
+<h2>Thank You!</h2>
+<p class="inner"><?=$name?>さん、ご登録ありがとうございます♡</p>
+<a href="index.html" class="b_btn">SITE TOP ▶︎</a>
 </body>
 </html>

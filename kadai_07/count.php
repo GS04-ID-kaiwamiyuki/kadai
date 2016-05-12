@@ -54,9 +54,17 @@ if($flag==false){
         -webkit-user-select: none;
         -ms-user-select: none;
     }
+        table{width: 35%; height: auto;}
+table td {
+    padding: 16px 25px;
+    border-bottom: 1px solid #dfdfdf;
+}
+        #count{
+            height: auto;
+        }
     </style>
 </head>
-<
+
 <body id="main" style="background-image:url(img/bg.jpg);">
     <div id="count">
 <!-- Head[Start] -->
@@ -64,13 +72,13 @@ if($flag==false){
   <nav class="navbar">
     <div class="container-fluid">
       <div class="navbar-header">
-      <h2>投票RANKING</h2>
+      <h2>RANKING</h2>
     </div>
   </nav>
 </header>
 <!-- Head[End] -->
 <!-- Main[Start] -->
-<div>
+<div style="width:50%; height:auto;">
     <div class="container">
     <table>
         <tr>
@@ -82,7 +90,7 @@ if($flag==false){
     </table>
     </div>
   </div>
-  <div id="container" style="width: 64%;">
+  <div id="container" style="width:48%;">
         <canvas id="canvas"></canvas>
     </div>
     <p><input type="button" name="" value="トップへ戻る" onclick="modoru()"></p>

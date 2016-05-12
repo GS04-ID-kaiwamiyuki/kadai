@@ -55,7 +55,8 @@ if($flag==false){
 <!-- Main[Start] -->
 <div>
     <div class="container jumbotron">
-    <table>
+    <div style="height:500px; width:1160px; overflow-y:scroll;">
+    <table style="height:500px; width:1160px;">
         <tr>
             <th>名前</th>
             <th>mail</th>

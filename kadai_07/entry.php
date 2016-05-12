@@ -7,6 +7,31 @@
 <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css" media="all">
 <link href="css/style.css" type="text/css" rel="stylesheet" media="all">
 
+<style>
+    p {
+	margin-bottom: 2em;
+}
+input {
+	width: 200px;
+	margin-top: 1em;
+	padding: .5em;
+}
+input[type="text"] {
+	width: 380px;
+	-webkit-transition: width .3s;
+	transition: width .3s;
+}
+input[type="text"]:focus {
+	width: 300px;
+}
+label {
+        display: inline-block;
+        max-width: 100%;
+        margin: 1px 0 30px !important;
+        font-weight: bold;
+}
+    </style>
+
 <script type="text/javascript">
     //未入力チェック（未入力でアラート表示）
     function check(){
@@ -56,12 +81,12 @@
 
 <!-- Main[Start] -->
 <form method="post" action="insert.php" id="form01" >
-  <div class="#">
-   <fieldset>
-    <legend>ファンクラブ入会フォーム</legend>
-     <label>名前：<input type="text" name="name"></label><br>
-     <label>Email：<input type="text" name="email"></label><br>
-     <label>年齢：<input type="text" name="age"></label><br>
+  <div class="">
+   <fieldset class="inner">
+    <h3>※ 全項目に記入してください</h3>
+     <label>名前　：　<input type="text" name="name"></label><br>
+     <label>Email　：　<input type="text" name="email"></label><br>
+     <label>年齢　：　<input type="text" name="age"></label><br>
      <label>好きな曲：<select name="favorite">
         <option value="">選択してください</option>
         <option value="ポリリズム">ポリリズム</option>
