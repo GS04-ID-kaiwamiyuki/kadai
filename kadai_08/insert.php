@@ -1,11 +1,11 @@
 <?php
-//入力チェック(受信確認処理追加)
+// //入力チェック(受信確認処理追加)
 if(
   !isset($_POST["name"]) || $_POST["name"]=="" ||
   !isset($_POST["email"]) || $_POST["email"]=="" ||
   !isset($_POST["age"]) || $_POST["age"]=="" ||
-  !isset($_POST["favorite"]) || $_POST["favorite"]=="" ||
-);{
+  !isset($_POST["favorite"]) || $_POST["favorite"]=="" 
+){
   exit('ParamError');
 }
   //1. POSTデータ取得(okであればうけとる)
