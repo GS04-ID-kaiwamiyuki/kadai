@@ -1,0 +1,309 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body{
+	text-align:center;
+	font-family: Avenir , "Open Sans" , "Helvetica Neue" , "Helvetica" , "Arial" , "Verdana" , Roboto , "游ゴシック Light" , "Yu Gothic" , "游ゴシック体 Light" , "YuGothic" , "ヒラギノ角ゴ Pro W3" , "Hiragino Kaku Gothic Pro" , "Meiryo UI" , "メイリオ","Meiryo" , "ＭＳ Ｐゴシック" , "MS PGothic" , sans-serif;
+	line-height:1.8;
+	color: #989891;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    font-size: 18px;
+}
+
+/*clearfix*/
+.clearfix:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+/*float*/
+.left{
+	float:left;
+}
+.right{
+	float:right;
+}
+/*ボタン*/
+.btn{
+	border:1px #fafae9 solid;
+	padding:2.5% 33%;
+	margin: 3% auto;
+	font-size:14px;
+}
+.b_btn{
+    display: inline;
+    border: 1px #fafae9 solid;
+    padding: 0.6% 8%;
+    margin: 0 auto;
+    font-size: 14px;
+}
+
+/*横幅設定*/
+.inner{
+    width: 960px;
+    height: auto;
+    margin:0 auto 30px;
+}
+
+.flame{
+	border:1px #000000 solid;
+	padding:2px;
+	margin: 0 5px;
+	font-size:14px;
+}
+
+.date{
+	clear:both;
+}
+
+a {
+	text-decoration: none;
+	color: #333;
+	display:block;
+}
+
+a:hover {
+	color: #ECECEC;
+    text-decoration: none;
+}
+
+.none {
+	width: 0%;
+	height: 0%;
+	display:none;
+}
+
+/*スライド設定*/
+#slide {
+	width:750px;
+	height:450px;
+	margin:0 auto;
+	position:relative;
+	margin-bottom:32px
+}
+#slide img {
+	position:absolute;
+	left:0;
+	top:0;
+}
+/*ページトップスムーススクロール設定*/
+#page-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 77%;
+	opacity:0.7;
+}
+#page-top a {
+    background: #999;
+    text-decoration: none;
+    color: #fff;
+    width: 100px;
+    padding: 20px 0;
+    text-align: center;
+    display: block;
+    border-radius: 5px;
+}
+#page-top a:hover {
+    text-decoration: none;
+    background: #F5D8E8;
+}
+
+/*
+イメージhover時色変化設定
+*/
+
+a.overwhite,.overwhite{
+    background-color:#ffffff;
+    display:block;
+}
+.overwhite img,.overwhite {
+	transition-duration: 400ms;
+}
+a.overwhite:hover img,.overwhite:hover{
+    cursor:pointer;
+    filter: alpha(opacity=60);        /* ie lt 8 */
+    -ms-filter: "alpha(opacity=60)";  /* ie 8 */
+    -moz-opacity:0.6;                 /* FF lt 1.5, Netscape */
+    -khtml-opacity: 0.6;              /* Safari 1.x */
+    opacity:0.6;
+    zoom:1;
+}
+dt.overwhite:hover{
+	zoom:1.02;
+	}
+
+/*
+ボタンhover時色変化設定
+*/
+
+figure {
+	position: relative;
+	overflow: hidden;
+	width: 300px;
+}
+figcaption {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	width: 300px;
+	height: 60px;
+	background: rgba(0,0,0,.6);
+	-webkit-transform: rotateX(-180deg);
+	transform: rotateX(-180deg);
+	-webkit-transition: .5s;
+	transition: .5s;
+	opacity: 0;
+}
+figure:hover figcaption {
+	-webkit-transform: rotateX(0);
+	transform: rotateX(0);
+	opacity: 1;
+}
+/*ここまで*/
+
+/*table設定*/
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    display: table;
+    margin: 0 auto;
+    color: #555;
+}
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+table th {
+    font-weight: 600;
+    text-align: center;
+}
+table td {
+    padding: 32px 75px;
+    border-bottom: 1px solid #dfdfdf;
+}
+
+/*--h2下線の設定--*/
+h2 {
+    display: flex;
+    align-items: center;
+    text-align: center; /* for no-flexbox browsers */
+}
+h2:before,
+h2:after {
+    border-top: 1px solid #fafae9;
+    content: "";
+    display: inline; /* for IE */
+    flex-grow: 1;
+}
+h2:before {
+    margin-right: 0.5em;
+}
+h2:after {
+    margin-left: 0.5em;
+}
+
+#contents h2 span{
+	font-size:24px;
+}
+
+/*--見出し設定--*/
+h2,h3 ,h4,h5{
+	color: #fafae9;
+}
+
+h2{
+	font-size:58px;
+	font-weight:800;
+	text-align:center;
+	margin:0  auto 2%;
+}
+
+h3 {
+	font-size:20px;
+	margin:0 auto 40px;
+	width:260px;
+	height:auto;
+	text-align:center;
+}
+
+h5 {
+	width:auto;
+	height:auto;
+	font-size:16px;
+	margin:0 auto 16px;
+}
+
+/*ここまで
+ここからコンテンツ*/
+
+#index,#insert,#top,#select{
+    background-image: url(../img/bg_img.png) !important;
+    background-repeat: repeat;
+    background-color: #000 !important;
+    background-size: cover;
+    min-height: 1100px;
+}
+#top header{
+        padding: 3%;
+}
+#top .main_img{
+    background-image: url(../img/perfume.jpg);
+    background-size: cover;
+    min-height: 600px;
+}
+#top #container{
+    display: block;
+    position: relative;
+}
+.wrap{
+    padding: 3%;
+}
+.nonetop{
+    padding-top: 0 !important;
+}
+.wrap.nonetop ul.clearfix{
+    width: 110%;
+    height: auto;
+    margin: 0 auto;
+}
+.subnav{
+    width: 78%;
+    margin: 1.2% auto;
+}
+.subnav ul{
+    width: 110%;
+    margin: 0  auto;
+}
+.subnav ul li{
+    width: 32%;
+    margin: 0 auto;
+    float: left;
+}
+.nonetop ul li{
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+}
+iframe{
+    padding: 1%;
+    border: 2px solid #ffff76;
+    margin: 3% auto;
+}
+
+.wrap ul.inner li{
+    margin: 0 auto 2%;
+}
+
+
+
